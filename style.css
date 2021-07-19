@@ -1,0 +1,356 @@
+
+
+/* header & navbar */
+
+.header {
+    width: 100%;
+    min-height: 100vh;
+    background-image: url('assets/main-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    background-color: rgba(0, 0, 0, 0.75);
+}
+
+.nav-menu {
+    margin-left: 150px;
+}
+
+.nav-style {
+    margin-top: -60px;
+    margin-bottom: -5px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 15px;
+    letter-spacing: 0.1em;
+}
+
+@media screen and (min-width: 370px) and (max-width: 998px) {
+    .nav-menu {
+        margin-left: 0;
+    }
+}
+
+.main {
+    margin-top: 50px;
+    color: white;
+    text-align: center;
+}
+
+.judul-main {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 60px;
+    line-height: 83px;
+    letter-spacing: 3px;
+}
+
+.deskripsi-main {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    /* identical to box height */
+    letter-spacing: 2px;
+    margin-top: 4%;
+
+}
+
+.wrapper:hover {
+    color: #FFB548;
+}
+
+.wrapper {
+    margin-top: 15%;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    height: 100px;
+    position: relative;
+    animation-name: example;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes example { 
+    0%   { left:0px; top: 0px;}
+    25%  {left:0px; top: 10px;}
+    50%  {font-size: 10px;}
+    75%  {left:0px; top: 10px;}
+    100% { left:0px; top:0px;}
+}
+
+/* end header & navbar */
+
+
+
+/* <!-- Game play  --> */
+
+.games-background {
+    width: 100%;
+    min-height: 110vh;
+    background-image: radial-gradient(136.03% 54.57% at 50% 48.04%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 60.63%, #080A0B 99.74%), url('assets/the-games-bg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.desk-game-play {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 20px;
+    letter-spacing: 2px;
+}
+
+.head-game-play {
+    font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 50px;
+line-height: 50px;
+letter-spacing: 3px;
+}
+
+/* End game play */
+
+
+
+/* Game feature  */
+
+.game-feature {
+    width: 100%;
+    min-height: 105vh;
+    background-image: url(assets/features.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.features {
+    padding-top: 150px;
+}
+
+.desk-game-feature {
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 19px;
+    line-height: 28px;
+    /* identical to box height */
+
+    letter-spacing: 2px;
+}
+
+.head-game-feature {
+    font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 45px;
+line-height: 64px;
+letter-spacing: 3px;
+}
+
+.head-features {
+    font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 24px;
+line-height: 30px;
+letter-spacing: 2px;
+color: #FFB548;
+}
+
+.desk-feature {
+    font-family: Arial;
+font-style: normal;
+font-weight: normal;
+font-size: 14px;
+line-height: 23px;
+/* or 122% */
+text-align: justify;
+
+}
+
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+    margin-top: 50px;
+}
+
+ul.timeline:before {
+    content: ' ';
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    top: 83px;
+    left: 26px;
+    width: 2px;
+    height: 31%;
+    z-index: 400;
+}
+
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+ul.timeline > li:before {
+    content: ' ';
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 1px solid white;
+    left: 20px;
+    width: 15px;
+    height: 15px;
+    z-index: 400;
+}
+
+/* end game features */
+
+
+
+
+/* requirements */
+
+.requirements {
+    width: 100%;
+    min-height: 105vh;
+    background-image: url(assets/requirements.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.requirements-style {
+    padding-top: 100px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+}
+
+.head-requirements {
+    font-size: 40px;
+    line-height: 45px;
+    letter-spacing: 3px;
+}
+
+.head-table-data {
+    color: #FFB548;
+    font-size: 18px;
+    line-height: 18px;
+    letter-spacing: 2px;
+}
+
+/* end requirements */
+
+
+
+/* top scores */
+
+.bg-top-scores {
+    width: 110%;
+    height: 100vh;
+    background-image: url(assets/bg-scores.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.container {
+    padding-top: 60px;
+    font-family: Arial;
+    font-style: normal;
+    font-weight: normal;
+}
+
+
+.scores {
+    padding-top: 130px;
+}
+
+.card-name {
+    font-size: 18px;
+    letter-spacing: 2px;
+    color: #FFB548;
+}
+
+.profesion {
+    margin-top: -10px;
+}
+
+.date-card {
+    margin-top: -15px;
+    padding-bottom: 5px;
+}
+
+.twitter {
+    background-size: 1px;
+    color: #ffffff;
+}
+
+.shadow {
+    width: 63px;
+    height: 63px;
+    background-color: #FFB548;
+    margin-top: -62px;
+    margin-left: 7px;
+}
+
+/* end top scores */
+
+
+
+/* footer */
+
+.footer {
+    background-image: url(assets/footer.png);
+    width: 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.head-footer {
+    letter-spacing: 3px;
+}
+
+.footer-menu {
+    text-decoration: none;
+    color: white;
+    font-size: 13px;
+}
+
+
+.fb {
+    width: 9.23px;
+    height: 18.99px;
+}
+
+.twitter {
+    width: 21.01px;
+    height: 16px;
+}
+
+.yt {
+    Width: 24.99px;
+    Height: 17.99px;
+}
+
+.twitch {
+    width: 19.15px;
+    height: 18.16px;
+}
+
+.desk-footer {
+    font-size: 15px;
+    line-height: 16px;
+    letter-spacing: 0.1em;
+}
