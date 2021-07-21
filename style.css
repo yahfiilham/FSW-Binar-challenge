@@ -28,11 +28,6 @@
     letter-spacing: 0.1em;
 }
 
-@media screen and (min-width: 370px) and (max-width: 998px) {
-    .nav-menu {
-        margin-left: 0;
-    }
-}
 
 .main {
     margin-top: 50px;
@@ -44,7 +39,7 @@
     font-family: Arial;
     font-style: normal;
     font-weight: bold;
-    font-size: 60px;
+    font-size: 4rem;
     line-height: 83px;
     letter-spacing: 3px;
 }
@@ -84,6 +79,13 @@
     100% { left:0px; top:0px;}
 }
 
+/* breakpoints */
+@media screen and (min-width: 270px) and (max-width: 998px) {
+    .nav-menu {
+        margin-left: 0;
+    }
+}
+
 /* end header & navbar */
 
 
@@ -110,11 +112,19 @@
 
 .head-game-play {
     font-family: Arial;
-font-style: normal;
-font-weight: normal;
-font-size: 50px;
-line-height: 50px;
-letter-spacing: 3px;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 50px;
+    line-height: 50px;
+    letter-spacing: 3px;
+}
+
+.carousel-indicators [data-bs-target] {
+    width: 10px !important;
+    height: 10px !important;
+    border-radius: 50%;
+    margin-left: 15px !important;
+    margin-right: 15px !important;
 }
 
 /* End game play */
