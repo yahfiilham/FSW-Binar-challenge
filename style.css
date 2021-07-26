@@ -1,100 +1,103 @@
-
-
-/* header & navbar */
-
-.header {
+/* main and navbar  */
+#main {
     width: 100%;
+    background-image: url(assets/main-bg.jpg);
     min-height: 100vh;
-    background-image: url('assets/main-bg.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
     background-position: center;
+    background-size: cover;
 }
 
 .navbar {
-    background-color: rgba(0, 0, 0, 0.75);
+    background-color: rgba(0, 0, 0, 0.5);
+    
 }
 
-.nav-menu {
-    margin-left: 150px;
+.main-to-call {
+    margin-top: 8rem;
 }
 
-.nav-style {
-    margin-top: -60px;
-    margin-bottom: -5px;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 15px;
-    letter-spacing: 0.1em;
-}
-
-
-.main {
-    margin-top: 50px;
-    color: white;
-    text-align: center;
-}
-
-.judul-main {
-    font-family: Arial;
-    font-style: normal;
+.main-heading {
     font-weight: bold;
     font-size: 4rem;
-    line-height: 83px;
     letter-spacing: 3px;
 }
 
-.deskripsi-main {
-    font-family: Arial;
-    font-style: normal;
+.main-desk {
     font-weight: normal;
-    font-size: 17px;
-    /* identical to box height */
+    font-size: 1.5rem;
     letter-spacing: 2px;
-    margin-top: 4%;
-
 }
 
-.wrapper:hover {
-    color: #FFB548;
+.scroll-style {
+    margin-top: 10rem;
 }
 
-.wrapper {
-    margin-top: 15%;
-    text-align: center;
+a {
     text-decoration: none;
-    color: white;
-    height: 100px;
-    position: relative;
-    animation-name: example;
-    animation-duration: 2s;
-    animation-iteration-count: infinite;
 }
 
-@keyframes example { 
-    0%   { left:0px; top: 0px;}
-    25%  {left:0px; top: 10px;}
-    50%  {font-size: 10px;}
-    75%  {left:0px; top: 10px;}
-    100% { left:0px; top:0px;}
+.animation {
+    animation: animation 2s ease infinite alternate;
 }
+
+@keyframes animation {
+    100% { font-size: 0.8rem;}
+} 
+
 
 /* breakpoints */
-@media screen and (min-width: 270px) and (max-width: 998px) {
-    .nav-menu {
-        margin-left: 0;
+@media  screen and (max-width: 600px) {
+
+    .main-to-call{
+        margin-top: 8rem;
+    }
+
+    .main-heading {
+        font-size: 2.5rem;
+    }
+
+    .main-desk {
+        font-size: 0.9rem;
+    }
+
+    .btn {
+        font-size: 0.9rem;
+    }
+
+    .scroll-style {
+        margin-top: 10rem;
+        font-size: 0.5rem;
     }
 }
 
-/* end header & navbar */
+@media screen and (min-width: 600px) and (max-width: 992px) {
+    .main-heading {
+        font-size: 3.1rem;
+    }
+
+    .main-desk {
+        font-size: 1.2rem;
+    }
+
+    .btn {
+        font-size: 1.2rem;
+    }
+
+    .scroll-style {
+        margin-top: 8rem;
+    }
+}
+
+/* end breakpoints */
+/* end main and navbar  */
 
 
 
 /* <!-- Game play  --> */
-
 .games-background {
     width: 100%;
-    min-height: 110vh;
+    min-height: 100vh;
     background-image: radial-gradient(136.03% 54.57% at 50% 48.04%, rgba(255, 255, 255, 0) 0%, rgba(0, 0, 0, 0) 60.63%, #080A0B 99.74%), url('assets/the-games-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -105,8 +108,8 @@
     font-family: Arial;
     font-style: normal;
     font-weight: normal;
-    font-size: 19px;
-    line-height: 20px;
+    font-size: 1.3rem;
+    line-height: 1.3rem;
     letter-spacing: 2px;
 }
 
@@ -114,28 +117,69 @@
     font-family: Arial;
     font-style: normal;
     font-weight: normal;
-    font-size: 50px;
+    font-size: 3.3rem;
     line-height: 50px;
     letter-spacing: 3px;
 }
+
+.previous{
+    margin-left: -10vw;
+    
+}
+
+.next {
+    margin-right: -10vw;
+}
+
 
 .carousel-indicators [data-bs-target] {
     width: 10px !important;
     height: 10px !important;
     border-radius: 50%;
-    margin-left: 15px !important;
-    margin-right: 15px !important;
+    margin-left: 1vw !important;
+    margin-right: 1vw !important;
 }
 
+/* breakpoints */
+@media screen and (max-width: 992px) {
+    .desk-game-play {
+        font-size: .9rem;
+    }
+
+    .head-game-play {
+        font-size: 2.5rem;
+    }
+
+    .previous, .next {
+        width: 20px;
+        height: 20px;
+    }
+}
+
+@media  screen and (max-width: 600px) {
+    .game-play {
+        padding-top: 0vh;
+    }
+
+    .desk-game-play {
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    .head-game-play {
+        font-size: 2rem;
+        text-align: center;
+    }
+}
+/* end breakpoints */
 /* End game play */
 
 
 
 /* Game feature  */
-
 .game-feature {
     width: 100%;
-    min-height: 105vh;
+    min-height: 100vh;
     background-image: url(assets/features.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -143,17 +187,15 @@
 }
 
 .features {
-    padding-top: 150px;
+    padding-top: 15vh;
 }
 
 .desk-game-feature {
     font-family: Arial;
     font-style: normal;
     font-weight: normal;
-    font-size: 19px;
+    font-size: 1rem;
     line-height: 28px;
-    /* identical to box height */
-
     letter-spacing: 2px;
 }
 
@@ -161,7 +203,7 @@
     font-family: Arial;
 font-style: normal;
 font-weight: normal;
-font-size: 45px;
+font-size: 3rem;
 line-height: 64px;
 letter-spacing: 3px;
 }
@@ -170,7 +212,7 @@ letter-spacing: 3px;
     font-family: Arial;
 font-style: normal;
 font-weight: normal;
-font-size: 24px;
+font-size: 1.5rem;
 line-height: 30px;
 letter-spacing: 2px;
 color: #FFB548;
@@ -182,26 +224,22 @@ font-style: normal;
 font-weight: normal;
 font-size: 14px;
 line-height: 23px;
-/* or 122% */
-text-align: justify;
-
 }
 
 ul.timeline {
     list-style-type: none;
     position: relative;
-    margin-top: 50px;
+    margin-top: 10vh;
 }
 
 ul.timeline:before {
     content: ' ';
     background: #d4d9df;
-    display: inline-block;
     position: absolute;
-    top: 83px;
+    top: 2.1vh;
     left: 26px;
     width: 2px;
-    height: 31%;
+    height: 49%;
     z-index: 400;
 }
 
@@ -221,13 +259,70 @@ ul.timeline > li:before {
     z-index: 400;
 }
 
+/* breakpoints */
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+    ul.timeline:before {
+        top: 2.5vh;
+        height: 55%;
+    }
+}
+
+@media screen and (min-width: 600px) and (max-width: 992px) {
+    .desk-game-feature {
+        font-size: .8rem;
+    }
+
+    .head-game-feature {
+        font-size: 2.5rem;
+    }
+
+    .head-features {
+        font-size: 1rem;
+    }
+
+    .desk-feature {
+        font-size: .9rem;
+    }
+
+    ul.timeline:before {
+        top: 2.3vh;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .game-feature {
+        width: 100%;
+    }
+
+    .features {
+        margin-left: 30vh;
+    }
+
+    .desk-game-feature {
+        font-size: .8rem;
+    }
+
+    .head-game-feature {
+        font-size: 2rem;
+    }
+
+    .head-features {
+        font-size: 1rem;
+    }
+
+    .desk-feature {
+        font-size: .8rem;
+    }
+
+    ul.timeline:before {
+        top: 2.3vh;
+    }
+}
+/* end breakpoints */
 /* end game features */
 
 
-
-
 /* requirements */
-
 .requirements {
     width: 100%;
     min-height: 105vh;
@@ -258,14 +353,53 @@ ul.timeline > li:before {
     letter-spacing: 2px;
 }
 
+/* breakpoints */
+@media screen and (min-width: 600px) and (max-width: 992px) {
+    .head-requirements {
+        font-size: 1.6rem;
+    }
+
+    .desk-requirements {
+        font-size: .8rem !important;
+    }
+
+    .head-table-data {
+        font-size: 1rem;
+    }
+
+    .desk-table-data {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+.requirements-style {
+    padding-top: 15vh;
+}
+
+    .head-requirements {
+        font-size: 1.7rem;
+    }
+
+    .desk-requirements {
+        font-size: .9rem !important;
+    }
+
+    .head-table-data {
+        font-size: 1rem;
+    }
+
+    .desk-table-data {
+        font-size: .9rem;
+    }
+}
+/* end breakpoints */
 /* end requirements */
 
 
-
-/* top scores */
-
+ /* top scores */
 .bg-top-scores {
-    width: 110%;
+    width: 100vw;
     height: 100vh;
     background-image: url(assets/bg-scores.png);
     background-repeat: no-repeat;
@@ -273,7 +407,7 @@ ul.timeline > li:before {
     background-position: center;
 }
 
-.container {
+.top-scores {
     padding-top: 60px;
     font-family: Arial;
     font-style: normal;
@@ -316,9 +450,7 @@ ul.timeline > li:before {
 /* end top scores */
 
 
-
 /* footer */
-
 .footer {
     background-image: url(assets/footer.png);
     width: 100%;
@@ -328,9 +460,15 @@ ul.timeline > li:before {
     background-position: center;
 }
 
+
 .head-footer {
     letter-spacing: 3px;
 }
+
+.footer-style {
+    margin-top: 80px;
+}
+
 
 .footer-menu {
     text-decoration: none;
@@ -364,3 +502,61 @@ ul.timeline > li:before {
     line-height: 16px;
     letter-spacing: 0.1em;
 }
+
+/* breakpoints */
+@media screen and (min-width: 600px) and (max-width: 992px) {
+    .hero-footer {
+        padding-top: 10vh;
+    }
+
+    .desk-footer {
+        font-size: .9rem;
+    }
+
+    .head-footer {
+        font-size: 2.5rem;
+    }
+
+    .footer-style {
+        margin-top: 5vh;
+    }
+
+    .footer-menu {
+        font-size: .7rem;
+    }
+
+    .email {
+        font-size: .7rem;
+        padding-right: 10vh;
+    }
+
+    .btn-subs {
+        font-size: .7rem;
+        margin-top: 2vh;
+    }
+
+    .ext-footer {
+        font-size: .8rem;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .hero-footer {
+        padding-top: 10vh;
+    }
+
+    .desk-footer {
+        font-size: .8rem;
+    }
+
+    .email {
+        font-size: .8rem;
+        padding: 0 5vh 0 0;
+    }
+
+    .ext-footer {
+        font-size: .6rem;
+    }
+}
+
+/* end breakpoints */

@@ -4,83 +4,86 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FSW Chapter 3 Challenge</title> 
-    <!-- stylesheet -->
-    <link rel="stylesheet" href="style.css">
+
     <!-- bootstrap -->
-    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+    <!-- my css -->
+    <link rel="stylesheet" href="style.css">
+    <title>Game Suwit Jepang</title>
 </head>
 <body>
-
-    <!-- navbar & header -->
-
-        <section class="header">
-            <!-- navbar -->
-            <nav class="navbar navbar-expand-lg navbar-dark border border-dark">
-                <div class="container text-uppercase nav-style">
-                    <a class="navbar-brand" href="#">Logo</a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav me-auto mb-2 mb-lg-0 nav-menu ">
-                            <li class="nav-item">
-                                <a class="nav-link active me-3" aria-current="page" href="#">Home</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link me-3" href="#">work</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link me-3" href="#">contack me</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">about</a>
-                            </li>
-                        </ul>
-                        <ul class="navbar-nav me-2 mb-2">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">sign up</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">login</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
-
-            <!-- Main call to action  -->
-            <div class="container main">
-                <div class="row row-cols-1">
-                    <div class="col">
-                        <h1 class="judul-main">PLAY TRADITIONAL GAME</h1>
-                        <p class="deskripsi-main">EXPERIENCE NEW TRADITIONAL GAME PLAY</p>
-                        <button class="btn btn-warning px-5 mt-5">PLAY NOW</button>
-                    </div>
-                    <div class="col mt-5 pt-5">
-                        <a href="#game-play" class="wrapper">
-                            <p>THE STORY</p>
-                            <img src="assets/scroll down1.png" alt="" style="width: 20px;">
-                        </a>
-                    </div>
-                </div>
+    
+    <!-- main and navbar -->
+    <section id="main">
+        <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark text-uppercase">
+        <div class="container">
+                <a class="navbar-brand" href="#">logo</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse ms-md-5" id="navbarNav">
+                <ul class="navbar-nav ms-md-5">
+                    <li class="nav-item me-md-4">
+                        <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item me-md-4">
+                        <a class="nav-link" href="#about">Work</a>
+                    </li>
+                    <li class="nav-item me-md-4">
+                        <a class="nav-link" href="#about">contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">about me</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">sign up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">login</a>
+                    </li>
+                </ul>
             </div>
-        </section>
-
-        <!-- end header and navbar -->
+        </div>
+    </nav>
+    <!-- end Navbar -->  
+    <!-- main -->
+    <main class="container text-white main-to-call">
+        <div class="row text-center">
+            <div class="col-md-12 fst-normal">
+                <h1 class="display-4 text-uppercase mb-md-4 main-heading">Play traditional game</h1>
+                <h3 class="mb-md-5 main-desk">Experience new traditional game play</h3>
+                <button type="button" class="btn btn-warning ps-md-5 pe-md-5">PLAY NOW</button>
+            </div>
+        </div> 
+        <div class="row text-center scroll-style animation">
+            <div class="col">
+                <a href="#game-play" class="text-white">
+                    <p>THE STORY</p>
+                    <i class="bi bi-caret-down"></i>
+                </a>
+            </div>
+        </div>
+    </main>
+    <!-- end main -->
+    </section>
+    <!-- end main and navbar -->
 
 
     <!-- Game Play -->
-
     <section class="games-background" id="game-play">
         <div class="container game-play">
             <div class="row">
-                <div class="col-4 text-light" style="margin-top: 100px;">
+                <div class="col-md-4 col-sm-12 text-sm-center text-light" style="margin-top: 100px;">
                     <p class="desk-game-play">What's so special?</p>
                     <h5 class="head-game-play">THE GAMES</h5>
                 </div>
 
-                <div class="col-7 slider" style="margin-top: 145px;">
+                <div class="col-md-7 text-md-center slider" style="margin-top: 10vw;">
                     <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-indicators">
                             <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -103,11 +106,21 @@
                             </div>
                         </div>
                         <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <!-- <span class="carousel-control-prev-icon" aria-hidden="true"></span> -->
+                            <span aria-hidden="true">
+                                <svg width="20" height="38" viewBox="0 0 20 38" fill="none" xmlns="http://www.w3.org/2000/svg" class="previous">
+                                <path d="M18 1.70007L18 35.7001L2 18.8904L18 1.70007Z" stroke="white" stroke-width="3.36454" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
                             <span class="visually-hidden">Previous</span>
                         </button>
                         <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <!-- <span class="carousel-control-next-icon" aria-hidden="true"></span> -->
+                            <span aria-hidden="true">
+                                <svg width="18" height="39" viewBox="0 0 18 39" fill="none" xmlns="http://www.w3.org/2000/svg" class="next">
+                                <path d="M1.82153 2.65635L1.82153 36.7297L15.5642 19.8838L1.82153 2.65635Z" stroke="white" stroke-width="3.36454" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </span>
                             <span class="visually-hidden">Next</span>
                         </button>
                     </div>
@@ -115,90 +128,85 @@
             </div>    
         </div>
     </section>
-
     <!-- and game play -->
 
 
     <!-- Game feature  -->
-
     <section class="game-feature">
         <div class="container text-light features">
             <div class="row">
-                <div class="col-4 offset-7 pt-5">
+                <div class="col-lg-4 offset-lg-7 col-sm-6 offset-sm-6">
                     <h3 class="desk-game-feature">What's so special?</h3>
                     <h1 class="head-game-feature">FEATURES</h1>
-                    <ul class="timeline py-5">
+                    <ul class="timeline">
                         <li class="bg-timeline">
                             <h6 class="head-features">TRADITIONAL GAMES</h6>
-                            <P class="desk-feature">If you miss your childhood, we provide many tradional games here</P>
+                            <P class="desk-feature">If you miss your childhood, we <br> provide many tradional games here</P>
                         </li>
-                        <li class="mt-5">
+                        <li class="mt-lg-5 ">
                             <h6 class="head-features">Game Suit</h6>
                         </li>
-                        <li class="mt-5">
+                        <li class="mt-lg-5">
                             <h6 class="head-features">TBD</h6>
                         </li>
                     </ul>
                 </div>
             </div>
         </div>
-    </section>
-    
-    <!-- eng game features -->
+    </section>   
+    <!-- end game features -->
 
 
     <!-- requirements -->
     <section class="requirements">
         <div class="container requirements-style">
-            <p class="text-center text-light fs-6 my-4"><small>Can My Computer Run This Game?</small></p>
+            <p class="text-center text-light fs-6 my-4 desk-requirements"><small>Can My Computer Run This Game?</small></p>
             <div class="row text-light my-2">
-                <div class="col-3">
+                <div class="col-lg-3 col-md-3 col-sm-6">
                     <h1 class="head-requirements">SYSTEM REQUIREMENTS</h1>
                 </div>
             </div>
             <div class="row py-3">
-                <div class="col-5 text-light">
+                <div class="col-lg-6 col-md-6 col-sm-7 text-light">
                     <!-- table -->
                     <table class="table table-bordered border-dark text-light ">
                         <tbody>
                             <tr>
                                 <td>
                                     <h6 class="head-table-data">OS:</h6>
-                                    <p><small> Windows 7 64-bit only (No OSX support at this time</small></p>
+                                    <p class="desk-table-data"><small> Windows 7 64-bit only (No OSX support at this time</small></p>
                                 </td>
                                 <td>
                                     <h6 class="head-table-data">PROCESSOR:</h6>
-                                    <p><small>Intel Core 2 Duo @ 2.4 GHZ or AMD Athlon X2 @ 2.8 GHZ</small></p>
+                                    <p class="desk-table-data"><small>Intel Core 2 Duo @ 2.4 GHZ or AMD Athlon X2 @ 2.8 GHZ</small></p>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
                                     <h6 class="head-table-data">mEMORY:</h6>
-                                    <p><smal>4 GB RAM</small></p>
+                                    <p class="desk-table-data"><smal>4 GB RAM</small></p>
                                 </td>
                                 <td>
                                     <h6 class="head-table-data">STORAGE:</h6>
-                                    <P><small>8 GB available space</small></P>
+                                    <P class="desk-table-data"><small>8 GB available space</small></P>
                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="2">
                                     <h6 class="head-table-data">GRAPHICS:</h6>
-                                    <p><small>NVIDIA GeForce GTX 660 2GB or <br> AMD Radeon HD 7850 2GB DirectX11 (Shader Model 5)</small></p>
+                                    <p class="desk-table-data"><small>NVIDIA GeForce GTX 660 2GB or <br> AMD Radeon HD 7850 2GB DirectX11 (Shader Model 5)</small></p>
                                 </td>
                             </tr>
                         </tbody>
                     </table>
                 </div>
     </section>
-
     <!-- end requirements -->
 
 
     <!-- Top Scores -->
-
     <section class="bg-top-scores">
-        <div class="container">
+        <div class="container top-scores">
             <div class="row text-light">
                 <div class="col-4 scores ps-5 mt-4">
                     <h1>TOP SCORER</h1>
@@ -276,65 +284,63 @@
             </div>    
         </div>
     </section>
-
     <!-- end top scores -->
-
 
     <!-- footer -->
     <section class="footer text-light">
         <div class="container">
-            <div class="row">
-                <div class="col-3 offset-1">
-                    <img src="assets/Rectangle.png" alt="" class="img-fluid bg-warning">
+            <div class="row  hero-footer">
+                <div class="col-lg-3 col-sm-4  offset-lg-1 mt-5 ">
+                    <img src="assets/Rectangle.png" alt="" class="img-fluid mt-sm-3">
                 </div>
-                <div class="col-6 offset-1 mt-3">
-                    <p>Want to stay in <br> touch?</p>
+                <div class="col-lg-6 col-sm-8  offset-lg-1 mt-5">
+                    <p class="desk-footer mt-lg-5">Want to stay in <br> touch?</p>
                     <h2 class="display-6 head-footer">NEWSLETTER <br> SUBSCRIBE</h2>
-                    <p>In order to start reciving our news, all you have to do is enter your email adress. 
+                    <p class="desk-footer">In order to start reciving our news, all you have to do is enter your email adress. 
                         everything else will be taken care of by us. We will send you emails containing information about game. We don't spam.
                     </p>
-                    <form class="row g-3 mt-4">
+                    <form class="row g-3 mt-lg-4">
                         <div class="col-auto rounded-3" style="background-color: rgba(255, 255, 255, 0.08);">
-                            <label for="staticEmail2"><small class="text-muted">your email address</small></label>
-                            <input type="text" readonly class="form-control-plaintext text-warning pe-5" id="staticEmail2" value="youremail@binar.co.id">
+                            <label for="staticEmail2" class="email"><small class="text-muted">your email address</small></label>
+                            <input type="text" readonly class="form-control-plaintext text-warning pe-lg-5 email" id="staticEmail2" value="youremail@binar.co.id">
                         </div>
                         <div class="col-auto">
-                            <button type="submit" class="btn btn-warning py-3 px-5">Subscribe now</button>
+                            <button type="submit" class="btn btn-warning py-lg-3 px-lg-5 mt-sm-1 btn-subs">Subscribe now</button>
                         </div>
                     </form>
                 </div>
 
-                <div class="row " style="margin-top: 80px;">
-                    <div class="col-7 offset-1 text-uppercase">
-                        <a href="" class="footer-menu me-5">main</a>
-                        <a href="" class="footer-menu me-5">about</a>
-                        <a href="" class="footer-menu me-5">game feature</a>
-                        <a href="" class="footer-menu me-5">system requirements</a>
+                <div class="row footer-style">
+                    <div class="col-lg-7 col-sm-9 offset-lg-1 text-uppercase">
+                        <a href="" class="footer-menu me-lg-5 me-sm-4">main</a>
+                        <a href="" class="footer-menu me-lg-5 me-sm-4">about</a>
+                        <a href="" class="footer-menu me-lg-5 me-sm-4">game feature</a>
+                        <a href="" class="footer-menu me-lg-5 me-sm-4">system requirements</a>
                         <a href="" class="footer-menu">quotes</a>
                     </div>
-                    <div class="col-4">
+                    <div class="col-lg-4 col-sm-3">
                         <a href="">
-                            <img src="assets/facebook.png" alt="" class="fb mx-5">
+                            <img src="assets/facebook.png" alt="" class="fb mx-lg-5 ms-md-5 me-md-4">
                         </a>
                         <a href="">
-                            <img src="assets/twitter-footer.png" alt="" class="twitter me-5">
+                            <img src="assets/twitter-footer.png" alt="" class="twitter me-lg-5 me-md-4">
                         </a>
                         <a href="">
-                            <img src="assets/yt.png" alt="" class="yt me-5">
+                            <img src="assets/yt.png" alt="" class="yt me-lg-5 me-md-4">
                         </a>
                         <a href="">
-                            <img src="assets/twitch.png" alt="" class="twitch me-5">
+                            <img src="assets/twitch.png" alt="" class="twitch me-lg-5 me-md-4">
                         </a>
                     </div>
                 </div>
                 <hr class="mt-3">
 
-                <div class="row">
+                <div class="row ext-footer">
                     <div class="col-6">
                         <p class="text-muted"><small> © 2018 Your Games, Inc. All Rights Reserved</small></p>
                     </div>
                     <div class="col-6 d-flex justify-content-end">
-                        <p class="desk-footer">Privacy Policy | Terms of Services | Code of Conduct </p>
+                        <p>Privacy Policy | Terms of Services | Code of Conduct </p>
                     </div>
                 </div>
                 
@@ -347,7 +353,8 @@
 
 
 
+    <!-- bootstrap -->
     <script src="js/bootstrap.min.js"></script>
-    <!-- <script src="js/popper.min.js"></script> -->
+    <script src="js/popper.min.js"></script>
 </body>
 </html>
