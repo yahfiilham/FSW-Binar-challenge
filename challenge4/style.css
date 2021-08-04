@@ -124,7 +124,7 @@ button {
 }
 
 .versus {
-    font-family: Open Sans;
+    font-family: Arial;
     font-style: normal;
     font-weight: bold;
     font-size: 100px;
@@ -139,14 +139,98 @@ button {
 .refresh > a > img {
     width: 30px;
     height: 30px;
-    margin-top: 20px;
+    margin-top: 0;
     margin-left: 50%;
 }
 
-.chosen {
+.style-choice {
     width: 180px;
     height: 150px;
     background-color: #C4C4C4;
     border-radius: 30px
-    
+}
+
+.style-result {
+    width: 271.11px;
+    height: 166.93px;
+    background: #4C9654;
+    border-radius: 10px;
+    transform: rotate(-28.87deg);
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    line-height: 166.93px;
+}
+
+.player-choice button img:hover {
+    animation: shake .8s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes shake {
+    0% { transform: translate(1px, 1px) rotate(0deg); }
+    10% { transform: translate(-1px, -2px) rotate(-1deg); }
+    20% { transform: translate(-3px, 0px) rotate(1deg); }
+    30% { transform: translate(3px, 2px) rotate(0deg); }
+    40% { transform: translate(1px, -1px) rotate(1deg); }
+    50% { transform: translate(-1px, 2px) rotate(-1deg); }
+    60% { transform: translate(-3px, 1px) rotate(0deg); }
+    70% { transform: translate(3px, 1px) rotate(-1deg); }
+    80% { transform: translate(-1px, -1px) rotate(1deg); }
+    90% { transform: translate(1px, 2px) rotate(0deg); }
+    100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+
+@media screen and (max-width: 768px) {
+
+    .game-area {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .player-choice, .comp-choice {
+        display: flex;
+        flex-direction: row;
+        min-height: 100px;
+    }
+
+    .rock, .paper, .scissors {
+        width: 70px;
+    }
+
+    .result {
+        margin: 20px 0;
+    }
+
+    .versus {
+        font-size: 4rem;
+        height: 100px;
+        line-height: 100px;
+    }
+
+    .style-choice {
+        width: 130px;
+        height: 120px;
+        background-color: #C4C4C4;
+        border-radius: 30px
+    }
+
+    .style-result {
+        width: 150px;
+        height: 80px;
+        transform: rotate(-15.87deg);
+        font-size: 1rem;
+        line-height: 80px;
+        margin: auto;
+    }
+
+    .refresh > a > img {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 55%;
+        right: 50px;
+    }
 }
