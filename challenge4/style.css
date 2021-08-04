@@ -136,11 +136,12 @@ button {
     
 }
 
-.refresh > a > img {
+.refresh > img {
     width: 30px;
     height: 30px;
     margin-top: 0;
     margin-left: 50%;
+    cursor: pointer;
 }
 
 .style-choice {
@@ -226,7 +227,7 @@ button {
         margin: auto;
     }
 
-    .refresh > a > img {
+    .refresh > img {
         width: 25px;
         height: 25px;
         position: absolute;

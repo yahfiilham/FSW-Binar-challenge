@@ -7,7 +7,7 @@ const playerScissors = document.querySelector('.player-choice button .scissors')
 const compRock = document.querySelector('.comp-choice button .rock');
 const compPaper = document.querySelector('.comp-choice button .paper');
 const compScissors = document.querySelector('.comp-choice button .scissors');
-const refresh = document.querySelector('.refresh a img');
+const refresh = document.querySelector('.refresh img');
 
 
 // menangkap pilihan komputer
@@ -89,6 +89,10 @@ player.forEach(choice => {
         // end styling
     })
 });
+
+refresh.addEventListener('click', function() {
+     window.location.reload();
+})
 
 
 // // OOP
