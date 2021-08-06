@@ -1,6 +1,7 @@
 const player = document.querySelectorAll('.player-choice button img');
 const comp = document.querySelectorAll('.comp-choice button img');
 const styleResult = document.querySelector('.result .versus');
+const sytleChoice = document.querySelectorAll('#choice-style');
 const playerRock = document.querySelector('.player-choice button .rock');
 const playerPaper = document.querySelector('.player-choice button .paper');
 const playerScissors = document.querySelector('.player-choice button .scissors');
@@ -10,7 +11,7 @@ const compScissors = document.querySelector('.comp-choice button .scissors');
 const refresh = document.querySelector('.refresh img');
 
 
-// menangkap pilihan komputer
+// 1. menangkap pilihan komputer
 function getCompChoice() {
     const comp = Math.random();
     if(comp < 0.34) return "rock";
@@ -18,7 +19,7 @@ function getCompChoice() {
     return 'scissors';
 }
 
-// aturan
+// 2. aturan
 function getResult(comp, player) {
     if(player == comp) return 'DRAW'
     if(player == 'rock') return (comp == 'paper') ? 'COM WIN' :  'PLAYER 1 WIN';
@@ -26,7 +27,7 @@ function getResult(comp, player) {
     if(player == 'scissors') return (comp == 'rock') ? 'COM WIN' : 'PLAYER 1 WIN';
 }
 
-// menagkap pilihan player
+// 3. menagkap pilihan player
 player.forEach(choice => {
     choice.addEventListener('click', function () {
         const compChoice = getCompChoice();
@@ -45,7 +46,6 @@ player.forEach(choice => {
             styleResult.style.backgroundColor = '#4C9654';
         }
         // end styling result
-
 
         // styling player choice
         // tambah style jika player pilih batu
@@ -90,8 +90,16 @@ player.forEach(choice => {
     })
 });
 
+// 4. reset game
 refresh.addEventListener('click', function() {
-     window.location.reload();
+    // reset style di pilihan player dan com
+     sytleChoice.forEach( choice => {
+         choice.classList.remove('style-choice');
+     });
+    //  reset style di result
+     styleResult.classList.remove('style-result');
+     styleResult.innerHTML = 'VS';
+     styleResult.style.backgroundColor = 'inherit';
 })
 
 
