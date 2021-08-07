@@ -1,1 +1,1 @@
-Repositori untuk mengumpulkan challenge dari Bina
+Repository - challenge FSW Binar Academy
