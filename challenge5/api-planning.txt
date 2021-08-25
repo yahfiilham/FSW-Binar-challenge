@@ -1,0 +1,63 @@
+Standar API
+
+{root.api}/{version}/{grouping}/{endpoint}
+SAMPLE:
+localhost:8000/v1/auth/login
+
+Standar Status response
+
+200 - OK                        --> Call API Success
+201 - CREATED                   --> Post Success
+400 - BAD REQUEST               --> Error on Client Side (Bisa input yang salah , dll)
+401 - UNAUTHORIED               --> Users nor authorized to the REQUEST
+403 - FORBIDDEN                 --> Users not allowed to access
+404 - NOT FOUND                 --> Request endpoint not FOUND
+500 - INTERNAL SERVER ERROR     --> Error on server Side
+502 - BAD GATEWAY               --> Invalid response from another Request
+
+GROUP: Users
+
+[1] - Users -> login
+http://localhost:8000/v1/users
+req:
+{
+    "name": "Testing",
+    "email": "test@example.com,
+    "nohp": "089514585566"
+    "password": "12345678"
+}
+
+res:
+{
+    {
+        "message": "user with the name .. added to the database",
+        "data": {
+            "id": 1,
+            "name": "Testing",
+            "email": "test@example.com,
+            "password": "12345678"
+        }
+    }
+}
+
+err-response:
+Contoh 
+400 -> Input yang anda masukan tidak valid
+201 -> Create Data Users Success
+
+
+GROUP: data users
+
+[1] - Create Data Users -> method POST
+    http://localhost:8000/users
+[2] - Get Data Users -> method GET
+    <> get all data users
+        http://localhost:8000/users
+    <> get detail data users
+        http://localhost:8000/users/:id
+[3] - Update Data Users -> method PUT
+    http://localhost:8000/users/:id
+[4] - Delete Data Users -> method DELETE
+    http://localhost:8000/users/:id
+
+
