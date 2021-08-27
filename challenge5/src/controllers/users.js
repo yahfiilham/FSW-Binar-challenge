@@ -1,50 +1,65 @@
+const { v4: uuidv4 } = require('uuid'); // third-party-module -> membuat id random
 const { validationResult } = require("express-validator");
 // Data
 let data = 
     [
         {
             id: 1,
-            name: 'Yahfi Ilham',
-            email: 'yahfi.ilham@gmail.com',
-            nohp: '089517819502',
+            username: "yahfi",
+            email: "yahfi.ilham@gmil.com",
+            nohp: "089517819502",
             password: "ajvand"
         },
         {
             id: 2,
-            name: 'Evan',
-            email: 'evan@gmail.com',
-            nohp: '089517819854',
+            username: "evan",
+            email: "evan@gmail.com",
+            nohp: "089517819854",
             password: "eryuhgvag"
         },
         {
             id: 3,
-            name: 'Idan',
-            email: 'idan@gmail.com',
-            nohp: '089517819956',
+            username: "idan",
+            email: "idan@gmail.com",
+            nohp: "089517819956",
             password: "ajvanjnfj"
         },
     ];
 
 // READ all data 
 exports.readDataUsers = (req, res) => {
-    res.status(200).json({
-        message: 'get users data, success',
-        data,
-    });
+    if (data.length == 0) {
+        res.status(400).json({
+            status: 400,
+            message: "Blank Data!, you have to enter your data",
+            data,
+        })
+    } else {
+        res.status(200).json({
+            status: 200,
+            message: 'Get users data, success',
+            data,
+        });
+    }
+
 };
 
 // READ data by id
 exports.readDataUser = (req, res) => {
     id = req.params.id;
-    const found = data.find(i => i.id === +id);
+    const found = data.find((i) => i.id == id);
 
     if (found) {
         res.status(200).json({
-            message: 'get detail user data, success!',
+            status: 200,
+            message: 'Get detail user data, success!',
             data : found,
         });
     } else {
-        res.send(404);
+        res.status(404).json({
+            status: 404,
+            message: `Data with the id ${id} not found!`,
+        });
     }
 };
 
@@ -52,7 +67,7 @@ exports.readDataUser = (req, res) => {
 // Creat data baru
 exports.creatDataUsers = (req, res) => {
     // menghandle request body
-    const {name, email, nohp, password} = req.body;
+    const {username, email, nohp, password} = req.body;
 
     // validasi input user
     const errors = validationResult(req);
@@ -63,16 +78,17 @@ exports.creatDataUsers = (req, res) => {
         throw err;
     }
 
-    // menangkap id secara otomatis
-    const id = data[data.length - 1].id + 1;
+    // menangkap id secara otomatis dengan mudule uuid
+    const id = uuidv4();
     // menangkap request body
-    const user = {id, name, email, nohp, password};
+    const user = {id, username, email, nohp, password};
 
     // simpan ke data array
     data.push(user);
 
     res.status(201).json({
-        message: `User with the name ${user.name} added to the database`,
+        status: 201,
+        message: `User with the username ${user.username} added to the database`,
         data: user,
     });
 };
@@ -90,19 +106,20 @@ exports.updateDataUsers = (req, res) => {
     }
 
     // menghandle request body
-    const {name, email, nohp, password} = req.body;
+    const {username, email, nohp, password} = req.body;
 
     // menangkap id
     id = req.params.id;
-    const user = data.find(i => i.id === +id);
+    const user = data.find((i) => i.id == id);
 
-    if (name) user.name = name;
+    if (username) user.username = username;
     if (email) user.email = email;
     if (nohp) user.nohp = nohp;
     if (password) user.password = password;
 
     res.status(200).json({
-        message: `User with the name ${user.name} has been updated`,
+        status: 200,
+        message: `User with the username ${user.username} has been updated`,
         data: user,
     })
 
@@ -112,8 +129,22 @@ exports.updateDataUsers = (req, res) => {
 // delete data user
 exports.deleteDataUsers = (req, res) => {
     id = req.params.id;
-    data = data.filter(user => user.id !== +id);
+    users = data;
+
+    // errorr ketika id tidak ada di data
+    newData = users.filter((user) => user.id != id);
+    if (users.length == newData.length) {
+        res.status(404).json({
+            status: 404,
+            message: `Data with the id ${id} not found!`,
+        })
+        return false;
+    }
+    
+    // new data
+    data = data.filter((user) => user.id != id);
     res.status(200).json({
+        status: 200,
         message: `User with the id ${id} deleted from the database.`,
     });
 };

@@ -1,9 +1,9 @@
 const express = require('express');
-const app = express();
+const router = express.Router();
 const {readHome} = require('../controllers/home')
 
 // challengge 3
 // READ -> get
-app.get('/', readHome) 
+router.get('/', readHome) 
 
-module.exports = app;
+module.exports = router;

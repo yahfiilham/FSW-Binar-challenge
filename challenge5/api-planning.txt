@@ -15,10 +15,11 @@ Standar Status response
 500 - INTERNAL SERVER ERROR     --> Error on server Side
 502 - BAD GATEWAY               --> Invalid response from another Request
 
+
 GROUP: Users
 
 [1] - Users -> login
-http://localhost:8000/v1/users
+http://localhost:8000/users
 req:
 {
     "name": "Testing",
@@ -30,6 +31,7 @@ req:
 res:
 {
     {
+        "status" : 201,
         "message": "user with the name .. added to the database",
         "data": {
             "id": 1,
@@ -46,7 +48,7 @@ Contoh
 201 -> Create Data Users Success
 
 
-GROUP: data users
+GROUP: CRUD data users
 
 [1] - Create Data Users -> method POST
     http://localhost:8000/users

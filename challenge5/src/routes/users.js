@@ -5,7 +5,7 @@ const {body} = require('express-validator');
 const {creatDataUsers, readDataUsers, readDataUser, updateDataUsers, deleteDataUsers} = require('../controllers/users');
 
 // CREAT data -> method --> post
-router.post('/users',
+router.post('/',
     [
         // validasi req body
         body('email').isEmail().withMessage('Invalid Email!'),
@@ -15,13 +15,13 @@ router.post('/users',
 
 
 // READ all data users -> method --> get
-router.get('/users', readDataUsers);
+router.get('/', readDataUsers);
 
 // READ data user by id -> method --> get
-router.get('/users/:id', readDataUser);
+router.get('/:id', readDataUser);
 
 // UPDATE user data -> method --> put
-router.put('/users/:id', [
+router.put('/:id', [
     // validasi req body
     body('email').isEmail().withMessage('Invalid Email!'),
     body('nohp').isMobilePhone('id-ID').withMessage('Invalid Mobile Phone Number!'),
@@ -29,7 +29,7 @@ router.put('/users/:id', [
 ], updateDataUsers);
 
 // DELETE user data -> method --> delete
-router.delete('/users/:id', deleteDataUsers);
+router.delete('/:id', deleteDataUsers);
 
 
 

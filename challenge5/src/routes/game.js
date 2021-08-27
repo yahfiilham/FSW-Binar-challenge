@@ -1,7 +1,7 @@
 const express = require('express');
-const app = express();
+const router = express.Router();
 const {readGame} = require('../controllers/game');
 
-app.get('/game', readGame);
+router.get('/', readGame);
 
-module.exports = app;
+module.exports = router;

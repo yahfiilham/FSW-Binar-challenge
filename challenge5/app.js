@@ -18,10 +18,10 @@ app.use(express.json());
 app.use('/', homeRoutes);
 
 // challenge 4
-app.use('/', gameRoutes);
+app.use('/game', gameRoutes);
 
 // challenge 5
-app.use('/', usersRoutes);
+app.use('/users', usersRoutes);
 
 // membuat default error response validasi
 app.use((error, req, res, next) => {
