@@ -1,0 +1,16 @@
+[
+    {
+        "id": 1,
+        "username": "yahfi",
+        "email": "yahfi.ilham@gmil.com",
+        "nohp": "089517819502",
+        "password": "admin123"
+    },
+    {
+        "id": 2,
+        "username": "evan",
+        "email": "evan@gmail.com",
+        "nohp": "089517819854",
+        "password": "admin123"
+    }
+]

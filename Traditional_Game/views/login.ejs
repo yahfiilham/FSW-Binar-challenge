@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+
+        <link rel="stylesheet" href="stylesheet/bootstrap.min.css">
+        <style>
+            body {
+                background-image: url(images/assets-home/top-score-bg.png);
+            }
+
+            .login {
+                background-color: rgba(248, 248, 248, 0.08);
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <div class="container">
+            <div class="row justify-content-md-center" style="margin-top: 100px">
+                <div class="col-md-4  login card">
+                    <form method="POST" action="/game?isLogin=true">
+                        <div class="form-group mt-md-4">
+                            <label for="username" class="mb-md-2 text-warning">Username</label>
+                            <input name="username" type="text" class="form-control login" id="username" placeholder="Enter username">
+                        </div>
+                        <div class="form-group mt-md-4">
+                            <label for="password" class="mb-md-2 text-warning">Password</label>
+                            <input name="password" type="password" class="form-control login" id="password" placeholder="Password">
+                        </div>
+                        <button type="submit" class="btn btn-warning mt-md-4 px-md-4">Login</button>
+                    </form>
+                    <a href="/users" class="text-decoration-none text-warning mt-md-1"><small>forgot password?</small></a>
+                    <a href="/" class="mt-md-5 mb-md-3 text-decoration-none text-warning ">&laquo; Back To Home</a>
+                </div>
+            </div>
+        </div>
+
+        <script src="stylesheet/bootstrap/js/popper.min.js"></script>
+        <script src="stylesheet/bootstrap/js/bootstrap.min.js"></script>
+    </body>
+</html>
